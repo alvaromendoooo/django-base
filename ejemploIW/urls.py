@@ -36,5 +36,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include(routerProductos.urls)),
     path("", include(routerSedes.urls)),
-    path("", include(routerUser.urls))
+    path("", include(routerUser.urls)),
+    path("api/mascotas/", include('mascotas.urls')),
+    path("api/encuentros/", include('encuentros.urls'))
 ]
