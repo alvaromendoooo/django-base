@@ -25,6 +25,21 @@ services:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
       - postgres
+  
+  django_base:
+    image: mendo1/django-base:1.0
+    container_name: django_base
+    restart: always
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+    expose:
+      - 8000
 
 volumes:
   postgres_data:

@@ -1,0 +1,479 @@
+{
+  "info": {
+    "_postman_id": "1fe4638c-2259-43b2-a040-3fa8b6cda1a0",
+    "name": "ejemploIW",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43750278",
+    "_collection_link": "https://go.postman.co/collection/43750278-1fe4638c-2259-43b2-a040-3fa8b6cda1a0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Tipo Mascota",
+      "item": [
+        {
+          "name": "Crear un tipo de mascota",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\" : \"Beagle\",\r\n    \"codigo\" : \"PB01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/tipos/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "tipos",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar tipos de mascota",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/tipos/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "tipos",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtiene tipo de mascota por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/tipos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "tipos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar tipo de mascota",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\" : \"Pastor alemán\",\r\n    \"codigo\" : \"PA01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/tipos/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "tipos",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar tipo de mascota",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Mascotas",
+      "item": [
+        {
+          "name": "Crear una mascota",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "foto",
+                  "type": "file",
+                  "uuid": "897c8d09-86ec-456f-95a4-2906549ada52",
+                  "src": "/C:/Users/Alfis/OneDrive - Universidad de Extremadura/Imágenes/Capturas de pantalla/Captura de pantalla 2026-02-26 195441.png"
+                },
+                {
+                  "key": "nombre",
+                  "value": "Huesos",
+                  "type": "text",
+                  "uuid": "fd802ee2-2fbb-4db0-8321-730214b4efaa"
+                },
+                {
+                  "key": "descripcion",
+                  "value": "Le gusta morder todo lo que se encuentra",
+                  "type": "text",
+                  "uuid": "ae34ae43-ae24-4700-b1cf-52a7cc2162a8"
+                },
+                {
+                  "key": "tipo_mascota",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "bb06dea8-3245-4f0c-85f7-6bb7f535e141"
+                },
+                {
+                  "key": "tipo_mascota_detalle",
+                  "value": "PA01",
+                  "type": "text",
+                  "uuid": "7cc15fb9-b4e8-4d53-9d91-169300067774"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listas mascotas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener mascota por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar mascota",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "foto",
+                  "type": "file",
+                  "uuid": "9ddd3ea6-4cf6-43e3-9046-15e45c20d1f6",
+                  "src": "/C:/Users/Alfis/OneDrive - Universidad de Extremadura/Imágenes/Capturas de pantalla/4qvzwzguswm61.jpg"
+                },
+                {
+                  "key": "nombre",
+                  "value": "Milo",
+                  "type": "text",
+                  "uuid": "e48e959d-570d-4e48-b27b-16fed8b54106"
+                },
+                {
+                  "key": "descripcion",
+                  "value": "Le gusta morder todo lo que se encuentra",
+                  "type": "text",
+                  "uuid": "71b96f10-3b4c-45bd-b7ba-b8a18453f78a"
+                },
+                {
+                  "key": "tipo_mascota",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "e07307f9-a6de-40ac-8897-63dee1f2e040"
+                },
+                {
+                  "key": "tipo_mascota_detalle",
+                  "value": "PA01",
+                  "type": "text",
+                  "uuid": "29603f3d-356d-40e9-9fab-b6d38c90eccb"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Mascota",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/mascotas/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "mascotas",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Encuentros",
+      "item": [
+        {
+          "name": "Crear Encuentro",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\" : \"Quedada reconfortante\",\r\n    \"descripcion\" : \"Encuentro dedicado a pasarlo bien unas horitas para desahogarse del trabajo\",\r\n    \"fecha\" : \"2026-04-11\",\r\n    \"limite_usuarios\" : 10,\r\n    \"localizacion\" : \"Parque del príncipe\",\r\n    \"duracion_minutos\" : 45,\r\n    \"tipo_mascota\" : 1,\r\n    \"tipo_mascota_detalle\" : \"PA01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http:///localhost:8000/api/encuentros/",
+              "protocol": "http",
+              "path": [
+                "localhost:8000",
+                "api",
+                "encuentros",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener encuentros asociados a un tipo de mascota",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/encuentros/?tipo_mascota=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "encuentros",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "tipo_mascota",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener encuentros en una fecha determinada",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/encuentros/?fecha=2026-04-11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "encuentros",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "fecha",
+                  "value": "2026-04-11"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener encuentros por su id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/encuentros/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "encuentros",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un encuentro",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\" : \"Quedada reconfortante\",\r\n    \"descripcion\" : \"Encuentro dedicado a pasarlo bien unas horitas para desahogarse del trabajo\",\r\n    \"fecha\" : \"2026-04-11\",\r\n    \"limite_usuarios\" : 10,\r\n    \"localizacion\" : \"Parque del príncipe\",\r\n    \"duracion_minutos\" : 41,\r\n    \"tipo_mascota\" : 1,\r\n    \"tipo_mascota_detalle\" : \"PA01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/encuentros/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "encuentros",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar encuentro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/encuentros/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "encuentros",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
